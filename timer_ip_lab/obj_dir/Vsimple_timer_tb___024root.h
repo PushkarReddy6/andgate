@@ -1,0 +1,47 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design internal header
+// See Vsimple_timer_tb.h for the primary calling header
+
+#ifndef VERILATED_VSIMPLE_TIMER_TB___024ROOT_H_
+#define VERILATED_VSIMPLE_TIMER_TB___024ROOT_H_  // guard
+
+#include "verilated.h"
+#include "verilated_timing.h"
+
+
+class Vsimple_timer_tb__Syms;
+
+class alignas(VL_CACHE_LINE_BYTES) Vsimple_timer_tb___024root final : public VerilatedModule {
+  public:
+
+    // DESIGN SPECIFIC STATE
+    CData/*0:0*/ simple_timer_tb__DOT__clk;
+    CData/*0:0*/ simple_timer_tb__DOT__rst;
+    CData/*0:0*/ simple_timer_tb__DOT__start;
+    CData/*7:0*/ simple_timer_tb__DOT__load_val;
+    CData/*0:0*/ simple_timer_tb__DOT__done;
+    CData/*7:0*/ simple_timer_tb__DOT__uut__DOT__count;
+    CData/*0:0*/ simple_timer_tb__DOT__uut__DOT__running;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__simple_timer_tb__DOT__clk__0;
+    CData/*0:0*/ __Vtrigprevexpr___TOP__simple_timer_tb__DOT__rst__0;
+    CData/*0:0*/ __VactContinue;
+    IData/*31:0*/ __VactIterCount;
+    VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
+    VlDelayScheduler __VdlySched;
+    VlTriggerVec<2> __VactTriggered;
+    VlTriggerVec<2> __VnbaTriggered;
+
+    // INTERNAL VARIABLES
+    Vsimple_timer_tb__Syms* const vlSymsp;
+
+    // CONSTRUCTORS
+    Vsimple_timer_tb___024root(Vsimple_timer_tb__Syms* symsp, const char* v__name);
+    ~Vsimple_timer_tb___024root();
+    VL_UNCOPYABLE(Vsimple_timer_tb___024root);
+
+    // INTERNAL METHODS
+    void __Vconfigure(bool first);
+};
+
+
+#endif  // guard

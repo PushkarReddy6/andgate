@@ -1,0 +1,9 @@
+read_verilog counter.v alu.v mux2x1.v mini_soc.v
+hierarchy -check -top mini_soc
+proc; opt; fsm; opt; memory; opt; 
+techmap; opt; 
+dfflibmap -liberty /home/lab-user/Desktop/bootcamp-files/Tech-pdks/osu018/osu018_stdcells.lib
+abc –liberty /home/lab-user/Desktop/bootcamp-files/Tech-pdks/osu018/osu018_stdcells.lib
+clean 
+show mini_soc
+write_verilog mini_soc_netlist.v 
